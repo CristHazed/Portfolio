@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h2 {
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 15px; 
+    font-size: 1.5;
+    
+}
+
+.navbarbutt {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+body {
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+section {
+    scroll-margin-top: 5rem; 
+}
+
+.profile {
+    padding-top: 5rem;
+    display: flex;
+    height: 45rem;
+    padding-left: 15rem;
+    align-items: center;
+    background-image: url("ChatGPT\ Image\ May\ 7\,\ 2026\,\ 01_33_07\ PM.png")
+}
+
+#logo {
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+}
+
+.Introduction {
+    justify-content: space-around;
+    width: 35rem;
+}
+
+.Introduction h1 {
+    color: white;
+    font-size: 5rem;
+    font-family: 'Inter', sans-serif;
+    padding-left: 0;
+}
+.Introduction h4 {
+    padding-left: 0.3rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+}
+.Introduction h3 {
+    padding-left: 0.3rem;
+    color: lightblue;
+    font-size: 3.5rem;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 1rem;
+}
+.Introduction p {
+    width: 30rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 1rem;
+}
+
+.Introduction button {
+    width: 12rem;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;    
+}
+
+#projects {
+    background-color: #2779F5;
+}
+#projects:hover {
+    cursor: pointer;
+}
+
+#contact {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-spacing: 1rem;
+}
+
+#contact:hover {
+    cursor: pointer;
+}
+
+button:active {
+  background-color: #f0f0f0; 
+  border-color: grey;     
+  color: #333333;            
+}
+
+#coding {
+    width: 45rem;
+}
+
+#About {
+    margin-top: 1rem;
+    padding-left: 8rem;
+    padding-right: 4rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    height: 45rem;
+}
+
+#profilepic {
+    height: 20rem;
+    border-radius: 30rem;
+    border-style: dashed;
+    border-color: #4ca3e6;
+    border-width: 5px;
+    align-items: center;
+}
+
+.words {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 40rem;
+    padding-left: 5rem;
+    font-family: 'Inter', sans-serif;   
+}
+
+.words h1 {
+    font-size: 4rem;
+    color: #2779F5;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-bottom: 0.2rem;
+    font-family: 'Inter', sans-serif;   
+}
+
+.words h2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.2rem;
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    font-family: 'Inter', sans-serif;   
+}
+
+.words p {
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-family: 'Inter', sans-serif;   
+}
+
+.words button {
+    display: flex;
+    flex-direction: row;
+    padding: 0.8rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+#words {
+    align-items: center;
+}
+
+#dlicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+    width: 1rem;
+}
+
+.projectcards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.projectcards .card {
+    background-color: transparent;
+    perspective: 1200px;
+    width: 20rem;
+    height: 27rem;
+    cursor: pointer;
+}
+
+.projectcards .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.projectcards .card.is-flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.projectcards .card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 35px rgba(16, 40, 75, 0.12);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.projectcards .card-face.card-back {
+    transform: rotateY(180deg);
+    background-color: #f5f9ff;
+}
+
+.projectcards .card:hover .card-face {
+    box-shadow: 0 18px 40px rgba(16, 40, 75, 0.18);
+}
+
+.projectcards .card:first-child .card-face {
+    border: 2px solid #2779F5;
+    background: linear-gradient(180deg, rgba(39,121,245,0.12), rgba(255,255,255,0.95));
+}
+
+.projectcards .card:first-child h2 {
+    color: #2779F5;
+}
+
+.projectcards .card:first-child .view-project {
+    background-color: #2779F5;
+    color: #ffffff;
+    border: none;
+}
+
+.projectcards .card-face h2 {
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #1b2545;
+}
+
+.projectcards .card-face p {
+    flex: 1;
+    font-family: 'Inter', sans-serif;
+    color: #3b3b3b;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.projectcards .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.view-project {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.85rem;
+    border: 1px solid #2779F5;
+    background: transparent;
+    color: #2779F5;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    align-self: flex-start;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.view-project:hover {
+    background-color: #2779F5;
+    color: #ffffff;
+}
+
+@media (max-width: 860px) {
+    .projectcards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectcards .card {
+        width: 100%;
+        max-width: 24rem;
+    }
+
+    .view-project {
+        width: 100%;
+    }
+}
+
+#Projects {
+    margin-top: 1rem;
+    padding-left: 8rem;
+    padding-right: 4rem;
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 45rem;
+}
+
+#Projects h3 {
+    font-size: 3rem;
+    color: #2779F5;
+    font-family: 'Inter', sans-serif;   
+    text-align: center;
+}
+
+#Projects h1 {
+    color: green;
+    font-family: 'Inter', sans-serif;   
+    text-align: center;
+}
+
+.texttitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
